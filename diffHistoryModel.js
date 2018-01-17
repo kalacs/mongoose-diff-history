@@ -4,7 +4,7 @@ var historySchema = new mongoose.Schema(
         collectionName: {type: String},
         collectionId: {type: mongoose.Schema.Types.ObjectId},
         diff: {},
-        user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
+        user: {},
         reason: {type: String},
         version: {type: Number, min: 0}
     },

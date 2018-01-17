@@ -128,7 +128,7 @@
       collectionId: id
     })
     .sort({'createdAt': 'desc'})
-    .populate('user').exec(function(err, histories) {
+    .exec(function(err, histories) {
       if (err) {
         return callback(err, null);
       }
@@ -162,7 +162,7 @@
         }
         var comment = "modified " + changedFields.concat(changedValues).join(", ");
         return mapCallback(null, {
-          changedBy: history.user.profile,
+          changedBy: history.user,
           changedAt: history.createdAt,
           updatedAt: history.updatedAt,
           reason: history.reason,
